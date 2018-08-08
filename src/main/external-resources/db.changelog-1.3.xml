@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Estos son los comentarios necesarios para la resolución de la incidencia -->
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+	<changeSet id="CNG-30" author="jcla">
+		<createTable tableName="user_data">
+			<column name="id_user" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="direccion" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+		<addForeignKeyConstraint constraintName="fk_user_data_user" baseTableName="user_data" baseColumnNames="id_user" referencedTableName="user"
+			referencedColumnNames="id" />
+	</changeSet>
+	<changeSet id="CNG-31" author="jcla">
+		<createTable tableName="provinces">
+			<column name="id_province" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="CNG-32" author="jcla">
+		<insert tableName="provinces">
+			<column name="id_province" valueNumeric="23" />
+			<column name="name" value="Jaén" />
+		</insert>
+		<insert tableName="provinces">
+			<column name="id_province" valueNumeric="4" />
+			<column name="name" value="Almería" />
+		</insert>
+		<insert tableName="provinces">
+			<column name="id_province" valueNumeric="28" />
+			<column name="name" value="Madrid" />
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

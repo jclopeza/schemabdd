@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Estos son los comentarios necesarios para la resolución de la incidencia -->
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+	<changeSet id="CNG-33" author="jcla">
+		<createTable tableName="cities">
+			<column name="id_city" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+ 
+	<changeSet id="CNG-34" author="jcla">
+		<insert tableName="cities">
+			<column name="id_city" valueNumeric="1" />
+			<column name="name" value="Barcelona" />
+		</insert>
+	</changeSet>
+
+	<changeSet id="CNG-35" author="jcla">
+		<createTable tableName="cars">
+			<column name="id_car" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+ 
+	<changeSet id="CNG-36" author="jcla">
+		<insert tableName="cars">
+			<column name="id_car" valueNumeric="1" />
+			<column name="name" value="Renault" />
+		</insert>
+	</changeSet>
+	
+	<changeSet id="CNG-37" author="jcla">
+		<insert tableName="cars">
+			<column name="id_car" valueNumeric="2" />
+			<column name="name" value="Opel" />
+		</insert>
+	</changeSet>
+		
+	<changeSet id="CNG-38" author="jcla">
+		<createTable tableName="motos">
+			<column name="id_moto" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="CNG-39" author="jcla">
+		<insert tableName="motos">
+			<column name="id_moto" valueNumeric="1" />
+			<column name="name" value="Honda" />
+		</insert>
+	</changeSet>
+	
+
+	<changeSet id="CNG-100" author="jcla">
+		<insert tableName="user">
+			<column name="id" valueNumeric="5"/>
+			<column name="login" value="jlg"/>
+			<column name="password" value="jlg"/>
+		</insert>
+	</changeSet>
+
+	<changeSet id="CNG-101" author="jcla">
+		<dropTable tableName="motos"/>
+	</changeSet>
+
+	<changeSet id="CNG-102" author="jcla">
+		<dropTable tableName="cars"/>
+		<dropTable tableName="cities"/>
+		<dropTable tableName="provinces"/>
+	</changeSet>
+
+	<changeSet id="CNG-103" author="jcla">
+		<createTable tableName="mountains">
+			<column name="id_mountain" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="CNG-104" author="jcla">
+		<dropTable tableName="mountains"/>
+	</changeSet>
+
+	<changeSet id="CNG-105" author="jcla">
+		<createTable tableName="mountain">
+			<column name="id_mountain" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="CNG-106" author="jcla">
+		<dropTable tableName="mountain"/>
+	</changeSet>
+
+	<changeSet id="CNG-107" author="jcla">
+		<createTable tableName="mountain">
+			<column name="id_mountain" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="CNG-108" author="jcla">
+		<dropTable tableName="mountain"/>
+	</changeSet>
+
+	<changeSet id="CNG-109" author="jcla">
+		<createTable tableName="mountain">
+			<column name="id_mountain" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="CNG-110" author="jcla">
+		<dropTable tableName="mountain"/>
+	</changeSet>
+
+	<changeSet id="CNG-111" author="jcla">
+		<createTable tableName="mountain">
+			<column name="id_mountain" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	
+	<changeSet id="CNG-112" author="jcla">
+		<dropTable tableName="mountain"/>
+	</changeSet>
+
+	<changeSet id="CNG-113" author="jcla">
+		<createTable tableName="mountain">
+			<column name="id_mountain" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="CNG-114" author="jcla">
+		<dropTable tableName="mountain"/>
+	</changeSet>
+
+	<changeSet id="CNG-115" author="jcla">
+		<createTable tableName="mountain">
+			<column name="id_mountain" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="CNG-116" author="jcla">
+		<createTable tableName="tecnofor">
+			<column name="id_alumno" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="CNG-1000" author="jcla">
+		<createTable tableName="cursodevops">
+			<column name="id_alumno" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="CNG-1121" author="jcla">
+		<dropTable tableName="cursodevops"/>
+	</changeSet>
+	
+</databaseChangeLog>
